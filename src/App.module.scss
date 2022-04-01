@@ -1,0 +1,24 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: center;
+}
+
+.bodySection {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid black;
+  flex: 1;
+  margin: 5px;
+}
