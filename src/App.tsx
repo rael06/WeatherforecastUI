@@ -8,14 +8,15 @@ type Weather = {
   summary: string;
 };
 
+// const apiUrl = "http://localhost:7999"
+const apiUrl = "http://192.168.59.100:30001"; // minikube weatherforecastapi-svc
+
 function App() {
   const [weathers, setWeathers] = React.useState<Weather[]>([]);
 
   async function handleClick() {
     console.log("hello world");
-    const weatherForecastResponse = await fetch(
-      "http://localhost:7999/WeatherForecast"
-    );
+    const weatherForecastResponse = await fetch(`${apiUrl}/WeatherForecast`);
     setWeathers(await weatherForecastResponse.json());
   }
 
